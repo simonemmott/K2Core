@@ -29,28 +29,28 @@ public class K2CoreTests {
 	
 	@Test
 	public void reflectionLoopTest() throws IOException {
+		
+		EntityMap entityMap = EntityMap.create(); // TODO
 
-		EntityMap em = EntityMap.create();
+		K2Reflector reflector = K2Reflector.create(entityMap); // TODO
 		
-		K2Reflector reflector = K2Reflector.create(em);
+		K2Class k2Class = reflector.reflect(K2Class.class); // TODO
 		
-		K2Class k2Class = reflector.reflect(K2Class.class);
+		JavaWidgetFactory javaWidgetFactory = JavaWidgetFactory.create("com.k2.core.widgets.java"); // TODO Create widgets
 		
-		JavaWidgetFactory javaWidgetFactory = JavaWidgetFactory.create("com.k2.core.widgets.java");
+		K2ClassAssembly classAssembly = K2ClassAssembly.create(javaWidgetFactory); // Done
 		
-		K2ClassAssembly classAssembly = K2ClassAssembly.create(javaWidgetFactory);
+		StringWriter sw = new StringWriter(); // Done
 		
-		StringWriter sw = new StringWriter();
+		classAssembly.output(k2Class, sw); // Done
 		
-		classAssembly.output(k2Class, sw);
+		Class<? extends K2Class> newCls = ClassUtil.createClassFromString(K2Class.class, "com.k2.core.model", "K2Class", sw.toString()); // Done
 		
-		Class<? extends K2Class> newCls = ClassUtil.createClassFromString(K2Class.class, "com.k2.core.model", "K2Class", sw.toString());
+		K2Reflector reflector2 = K2Reflector.create(EntityMap.create()); // As above
 		
-		K2Reflector reflector2 = K2Reflector.create(EntityMap.create());
+		K2Class k2Class2 = reflector2.reflect(newCls); // As above
 		
-		K2Class k2Class2 = reflector2.reflect(newCls);
-		
-		assertTrue(ObjectUtil.equivalent(k2Class2, k2Class));
+		assertTrue(ObjectUtil.equivalent(k2Class2, k2Class));  // Done
 
 	}
 	

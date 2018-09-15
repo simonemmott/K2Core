@@ -1,21 +1,21 @@
 package com.k2.reflector;
 
-import com.k2.EntityMap.EntityMap;
+import com.k2.EntityMap.EntitiesMap;
 import com.k2.core.model.K2Class;
 
 public class K2Reflector {
 
-	public static K2Reflector create(EntityMap entityMap) {
+	public static K2Reflector create(EntitiesMap entityMap) {
 		return new K2Reflector(entityMap);
 		
 	}
 	
-	public K2Reflector(EntityMap entityMap) {
+	public K2Reflector(EntitiesMap entityMap) {
 		this.entityMap = entityMap;
 	}
 
-	private final EntityMap entityMap;
-	public EntityMap getEntityMap() {
+	private final EntitiesMap entityMap;
+	public EntitiesMap getEntityMap() {
 		return entityMap;
 	}
 

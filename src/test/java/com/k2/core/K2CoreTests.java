@@ -13,7 +13,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.k2.EntityMap.EntityMap;
+import com.k2.EntityMap.EntitiesMap;
 import com.k2.JavaAssembly.JavaWidgetFactory;
 import com.k2.Util.ObjectUtil;
 import com.k2.Util.classes.ClassUtil;
@@ -30,7 +30,7 @@ public class K2CoreTests {
 	@Test
 	public void reflectionLoopTest() throws IOException {
 		
-		EntityMap entityMap = EntityMap.create(); // TODO
+		EntitiesMap entityMap = EntitiesMap.create(); // TODO
 
 		K2Reflector reflector = K2Reflector.create(entityMap); // TODO
 		
@@ -46,7 +46,7 @@ public class K2CoreTests {
 		
 		Class<? extends K2Class> newCls = ClassUtil.createClassFromString(K2Class.class, "com.k2.core.model", "K2Class", sw.toString()); // Done
 		
-		K2Reflector reflector2 = K2Reflector.create(EntityMap.create()); // As above
+		K2Reflector reflector2 = K2Reflector.create(EntitiesMap.create()); // As above
 		
 		K2Class k2Class2 = reflector2.reflect(newCls); // As above
 		

@@ -20,6 +20,11 @@
   <dependencies>
     <dependency>
       <groupId>com.k2</groupId>
+      <artifactId>K2Common</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.k2</groupId>
       <artifactId>Util</artifactId>
       <version>0.2.13</version>
     </dependency>

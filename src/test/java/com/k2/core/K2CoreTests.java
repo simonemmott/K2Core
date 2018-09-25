@@ -17,9 +17,9 @@ import com.k2.EntityMap.EntitiesMap;
 import com.k2.JavaAssembly.JavaWidgetFactory;
 import com.k2.Util.ObjectUtil;
 import com.k2.Util.classes.ClassUtil;
+import com.k2.common.reflector.K2Reflector;
 import com.k2.core.assemblies.K2ClassAssembly;
 import com.k2.core.model.K2Class;
-import com.k2.reflector.K2Reflector;
 
 
 
@@ -30,11 +30,11 @@ public class K2CoreTests {
 	@Test
 	public void reflectionLoopTest() throws IOException {
 		
-		EntitiesMap entityMap = EntitiesMap.create(); // TODO
+		EntitiesMap entityMap = EntitiesMap.create(); // Done
 
 		K2Reflector reflector = K2Reflector.create(entityMap); // TODO
 		
-		K2Class k2Class = reflector.reflect(K2Class.class); // TODO
+		K2Class k2Class = (K2Class) reflector.reflect(K2Class.class); // TODO
 		
 		JavaWidgetFactory javaWidgetFactory = JavaWidgetFactory.create("com.k2.core.widgets.java"); // TODO Create widgets
 		
@@ -48,7 +48,7 @@ public class K2CoreTests {
 		
 		K2Reflector reflector2 = K2Reflector.create(EntitiesMap.create()); // As above
 		
-		K2Class k2Class2 = reflector2.reflect(newCls); // As above
+		K2Class k2Class2 = (K2Class) reflector2.reflect(newCls); // As above
 		
 		assertTrue(ObjectUtil.equivalent(k2Class2, k2Class));  // Done
 

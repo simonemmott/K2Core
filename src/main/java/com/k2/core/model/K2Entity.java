@@ -8,15 +8,17 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
 import com.k2.common.annotation.MetaComponent;
-import com.k2.core.types.ComponentType;
+import com.k2.common.annotation.MetaField;
+import com.k2.core.types.ClassType;
 
-@MetaComponent(id=4)
+@MetaComponent(id=10)
 @Entity
-@DiscriminatorValue("INTERFACE")
-public class K2Interface extends K2Component{
+@DiscriminatorValue("ENTITY")
+public class K2Entity extends K2Class{
 
-	public K2Interface(Long id) {
-		super(id, ComponentType.INTERFACE);
+	public K2Entity(Long id) {
+		super(id, ClassType.ENTITY);
 	}
 
+	
 }

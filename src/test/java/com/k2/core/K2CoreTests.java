@@ -22,6 +22,7 @@ import com.k2.core.assemblies.K2ClassAssembly;
 import com.k2.core.model.K2Class;
 import com.k2.core.model.K2Component;
 import com.k2.core.model.K2Field;
+import com.k2.core.model.aModel.AK2Class;
 
 
 
@@ -91,11 +92,11 @@ public class K2CoreTests {
 		
 		EntitiesMap entityMap = EntitiesMap.create(); // Done
 
-		K2Reflector reflector = K2Reflector.create(entityMap); // Done
+		K2Reflector reflector = K2Reflector.create(K2Sequences.class, entityMap); // Done
 		
 		K2Class k2Class = (K2Class) reflector.reflect(K2Class.class); // Done
 		
-		JavaWidgetFactory javaWidgetFactory = JavaWidgetFactory.create("com.k2.core.widgets.java"); // TODO Create widgets
+		JavaWidgetFactory javaWidgetFactory = JavaWidgetFactory.create("com.k2.core.widgets.java"); // Done
 		
 		K2ClassAssembly classAssembly = K2ClassAssembly.create(javaWidgetFactory); // Done
 		
@@ -103,11 +104,11 @@ public class K2CoreTests {
 		
 		classAssembly.output(k2Class, sw); // Done
 		
-		Class<? extends K2Class> newCls = ClassUtil.createClassFromString(K2Class.class, "com.k2.core.model", "K2Class", sw.toString()); // Done
+		Class<? extends AK2Class> newCls = ClassUtil.createClassFromString(AK2Class.class, "com.k2.core.model", "K2Class", sw.toString()); // Done
 		
-		K2Reflector reflector2 = K2Reflector.create(EntitiesMap.create()); // As above
+		K2Reflector reflector2 = K2Reflector.create(EntitiesMap.create()); // Done
 		
-		K2Class k2Class2 = (K2Class) reflector2.reflect(newCls); // As above
+		K2Class k2Class2 = (K2Class) reflector2.reflect(newCls); // Done
 		
 		assertTrue(ObjectUtil.equivalent(k2Class2, k2Class));  // Done
 

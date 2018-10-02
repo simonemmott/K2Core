@@ -54,13 +54,13 @@ public class K2Field extends AK2Field {
 	public void setColumnName(String columnName) { this.columnName = columnName; }
 	
 	
-	@MetaField(sortOrder=20)
+	@MetaField()
 	@Column(name="IS_PRIMARY_KEY")
 	protected Boolean isPrimaryKey;
 	public Boolean getIsPrimaryKey() { return isPrimaryKey; }
 	public void setIsPrimaryKey(Boolean isPrimaryKey) { this.isPrimaryKey = isPrimaryKey; }
 
-	@MetaField(sortOrder=10)
+	@MetaField()
 	@Column(name="SORT_ORDER")
 	protected Integer sortOrder;
 	public Integer getSortOrder() { return sortOrder; }

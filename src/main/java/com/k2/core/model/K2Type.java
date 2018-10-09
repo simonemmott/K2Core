@@ -15,6 +15,7 @@ import com.k2.core.types.ComponentType;
 
 @MetaComponent(id=6)
 @Entity
+@DiscriminatorValue("TYPE")
 public class K2Type extends K2Component{
 
 	public K2Type(Long id) {

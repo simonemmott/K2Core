@@ -88,6 +88,10 @@ public class K2ClassWriterWidget extends AJavaWidget<K2Class> {
 				node.println(out, "}");
 			} else {
 				node.println(out, "public {}(Long id) {",data.getSimpleName());
+				if (data.getDiscriminatorValue() != null)
+					node.println(out, "super(id, {}.{});",
+							data.getDiscriminatorValue().getDefiningType().getSimpleName(),
+							data.getDiscriminatorValue().getAlias());
 				node.indent();
 					node.println(out, "this.id = id;");
 					node.outdent();

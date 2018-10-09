@@ -28,14 +28,8 @@ public class K2CoreDomainManager extends AK2DomainManager implements K2DomainMan
 		File repo = new File("/Users/simon/eclipse-workspace/K2Dynamic/src/main/java");
 				
 		ComponentGenerator gen = ComponentGenerator.create(repo, getJavaFactory());
-		
-		K2DaoFactory daoFactory = this.getDaoFactory();
-		
-		K2Dao<K2Entity, Long> k2EntityDao = daoFactory.getDao(K2Entity.class);
-		
-		
-		
-		for (K2Entity k2Entity : k2EntityDao.list()) {
+				
+		for (K2Entity k2Entity : this.getDaoFactory().getDao(K2Entity.class).list()) {
 			gen.generate(k2Entity);
 		}
 		

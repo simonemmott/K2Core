@@ -35,7 +35,7 @@ public class K2ClassWriterWidget extends AJavaWidget<K2Class> {
 
 	@Override
 	public Writer output(WidgetAssemblyNode<?,K2Class> node, K2Class data, Writer out) throws IOException {
-		
+				
 		if (data != null) {
 			K2Class extendsClass = data.getExtendsClass();
 			K2Class extendsEntity = extendsClass;
@@ -51,7 +51,7 @@ public class K2ClassWriterWidget extends AJavaWidget<K2Class> {
 			if (data instanceof K2Entity)
 				node.println(out, "@Entity");
 			
-			if (extendsEntity != null) {
+			if (extendsClass != null) {
 				if (data.getDiscriminatorValue() != null)
 					node.println(out, "@DiscriminatorValue(\"{}\")", data.getDiscriminatorValue().getAlias());
 			}

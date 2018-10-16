@@ -33,9 +33,7 @@ public class K2CoreTests {
 	@Test
 	public void componentWriterAssemblyTest() throws IOException {
 		
-		EntitiesMap entityMap = EntitiesMap.create();
-
-		K2Reflector reflector = K2Reflector.create(K2CoreSequences.class, entityMap).scan("com.k2.common.reflector");
+		K2Reflector reflector = K2Reflector.create(K2CoreSequences.class);
 		
 		K2Class k2Component = (K2Class) reflector.reflect(K2Component.class, K2Component.class);
 		
@@ -52,9 +50,7 @@ public class K2CoreTests {
 	@Test
 	public void classWriterAssemblyTest() throws IOException {
 		
-		EntitiesMap entityMap = EntitiesMap.create();
-
-		K2Reflector reflector = K2Reflector.create(K2CoreSequences.class, entityMap).scan("com.k2.common.reflector");
+		K2Reflector reflector = K2Reflector.create(K2CoreSequences.class);
 		
 		K2Class k2Class = (K2Class) reflector.reflect(K2Class.class, K2Component.class);
 		
@@ -71,9 +67,7 @@ public class K2CoreTests {
 	@Test
 	public void fieldWriterAssemblyTest() throws IOException {
 		
-		EntitiesMap entityMap = EntitiesMap.create();
-
-		K2Reflector reflector = K2Reflector.create(K2CoreSequences.class, entityMap).scan("com.k2.common.reflector");
+		K2Reflector reflector = K2Reflector.create(K2CoreSequences.class);
 		
 		K2Class k2Field = (K2Class) reflector.reflect(K2Field.class, K2Component.class);
 		
@@ -86,13 +80,11 @@ public class K2CoreTests {
 		System.out.println(sw.toString());
 		
 	}
-	
+/*	
 	@Test
 	public void reflectionLoopTest() throws IOException {
 		
-		EntitiesMap entityMap = EntitiesMap.create(); // Done
-
-		K2Reflector reflector = K2Reflector.create(K2CoreSequences.class, entityMap).scan("com.k2.common.reflector"); // Done
+		K2Reflector reflector = K2Reflector.create(K2CoreSequences.class); // Done
 		
 		K2Class k2Class = (K2Class) reflector.reflect(K2Class.class, K2Component.class); // Done
 		
@@ -106,14 +98,14 @@ public class K2CoreTests {
 		
 		Class<? extends AK2Class> newCls = ClassUtil.createClassFromString(AK2Class.class, "com.k2.core.model", "K2Class", sw.toString()); // Done
 		
-		K2Reflector reflector2 = K2Reflector.create(EntitiesMap.create()).scan("com.k2.common.reflector"); // Done
+		K2Reflector reflector2 = K2Reflector.create(EntitiesMap.create()); // Done
 		
 		K2Class k2Class2 = (K2Class) reflector2.reflect(newCls, K2Component.class); // Done
 		
 		assertTrue(ObjectUtil.equivalent(k2Class2, k2Class));  // Done
 
 	}
-	
+*/
 	
 	
 	

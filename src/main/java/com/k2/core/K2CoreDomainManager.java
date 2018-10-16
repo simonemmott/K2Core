@@ -2,6 +2,10 @@ package com.k2.core;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.invoke.MethodHandles;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.k2.EntityMap.EntitiesMap;
 import com.k2.JavaAssembly.JavaWidgetFactory;
@@ -12,12 +16,22 @@ import com.k2.common.domain.AK2DomainManager;
 import com.k2.common.domain.K2DomainManager;
 import com.k2.common.reflector.K2Reflector;
 import com.k2.core.model.K2Class;
+import com.k2.core.model.K2Component;
 import com.k2.core.model.K2Domain;
 import com.k2.core.model.K2Entity;
 import com.k2.core.source.ComponentGenerator;
 
-@MetaDomain(name="K2Core", description="This is the K2 core development domain")
+@MetaDomain(
+		name="K2 Core", 
+		description="This is the K2 core development domain",
+		sequencesClass=K2CoreSequences.class,
+		packages= {
+				"com.k2.core.model",
+				"com.k2.core.types"
+		})
 public class K2CoreDomainManager extends AK2DomainManager implements K2DomainManager {
+
+	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
 	public K2CoreDomainManager(K2Domain k2Domain, K2DaoFactory daoFactory) {
 		super(k2Domain, daoFactory);
@@ -29,9 +43,12 @@ public class K2CoreDomainManager extends AK2DomainManager implements K2DomainMan
 				
 		ComponentGenerator gen = ComponentGenerator.create(repo, getJavaFactory());
 				
-		for (K2Entity k2Entity : this.getDaoFactory().getDao(K2Entity.class).list()) {
-			gen.generate(k2Entity);
+		for (K2Component k2Comp : this.getDaoFactory().getDao(K2Component.class).list()) {
+			
+			gen.generate(k2Comp);
 		}
+		
+		gen.generate(this.getDomain());
 		
 	}
 

@@ -12,8 +12,10 @@
   <logger name="com.k2.Util.StringUtil" level="off"/>
   <logger name="com.k2.MetaModel.criteria" level="off"/>
   <logger name="com.k2.common.reflector" level="trace"/>
-  <logger name="com.k2.core" level="trace"/>
-  <root level="debug">
+  <logger name="com.k2.core" level="off"/>
+  <logger name="com.k2.common.dao.memoryDao" level="trace"/>
+  <logger name="com.k2.common.sequence" level="trace"/>
+  <root level="info">
     <appender-ref ref="STDOUT" />
   </root>
 </configuration>

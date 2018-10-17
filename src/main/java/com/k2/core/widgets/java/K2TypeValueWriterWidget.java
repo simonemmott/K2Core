@@ -37,8 +37,6 @@ public class K2TypeValueWriterWidget extends AJavaWidget<K2TypeValue> {
 	@Override
 	public Writer output(WidgetAssemblyNode<?,K2TypeValue> node, K2TypeValue data, Writer out, boolean isFirst, boolean isLast) throws IOException {
 
-		if (isFirst)
-			node.println(out, "//First");
 		node.println(out, "@MetaTypeValue(id={}, name=\"{}\", description=\"{}\")",
 				data.getId(),
 				data.getName(),

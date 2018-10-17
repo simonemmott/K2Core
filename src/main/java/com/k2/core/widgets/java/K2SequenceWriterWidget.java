@@ -40,7 +40,7 @@ public class K2SequenceWriterWidget extends AJavaWidget<K2Domain> {
 	}
 
 	@Override
-	public Writer output(WidgetAssemblyNode<?,K2Domain> node, K2Domain data, Writer out) throws IOException {
+	public Writer output(WidgetAssemblyNode<?,K2Domain> node, K2Domain data, Writer out, boolean isFirst, boolean isLast) throws IOException {
 				
 		if (data != null) {
 			

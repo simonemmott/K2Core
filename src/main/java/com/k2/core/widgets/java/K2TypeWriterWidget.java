@@ -35,7 +35,7 @@ public class K2TypeWriterWidget extends AJavaWidget<K2Type> {
 	}
 
 	@Override
-	public Writer output(WidgetAssemblyNode<?,K2Type> node, K2Type data, Writer out) throws IOException {
+	public Writer output(WidgetAssemblyNode<?,K2Type> node, K2Type data, Writer out, boolean isFirst, boolean isLast) throws IOException {
 		
 		if (data != null) {			
 			

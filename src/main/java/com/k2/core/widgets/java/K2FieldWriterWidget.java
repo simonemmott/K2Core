@@ -33,7 +33,7 @@ public class K2FieldWriterWidget extends AJavaWidget<K2Field> {
 	}
 
 	@Override
-	public Writer output(WidgetAssemblyNode<?,K2Field> node, K2Field data, Writer out) throws IOException {
+	public Writer output(WidgetAssemblyNode<?,K2Field> node, K2Field data, Writer out, boolean isFirst, boolean isLast) throws IOException {
 
 		if (data.getIsPrimaryKey())
 			node.println(out, "@Id");

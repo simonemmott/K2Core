@@ -34,7 +34,7 @@ public class K2ClassWriterWidget extends AJavaWidget<K2Class> {
 	}
 
 	@Override
-	public Writer output(WidgetAssemblyNode<?,K2Class> node, K2Class data, Writer out) throws IOException {
+	public Writer output(WidgetAssemblyNode<?,K2Class> node, K2Class data, Writer out, boolean isFirst, boolean isLast) throws IOException {
 				
 		if (data != null) {
 			K2Class extendsClass = data.getExtendsClass();

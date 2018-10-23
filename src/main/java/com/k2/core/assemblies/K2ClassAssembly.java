@@ -2,8 +2,8 @@ package com.k2.core.assemblies;
 
 import com.k2.JavaAssembly.JavaAssembly;
 import com.k2.JavaAssembly.JavaWidgetFactory;
-import com.k2.core.model.K2Class;
-import com.k2.core.model.K2Field;
+import com.k2.common.model.K2Class;
+import com.k2.common.model.K2Field;
 
 public class K2ClassAssembly extends JavaAssembly<K2Class> {
 

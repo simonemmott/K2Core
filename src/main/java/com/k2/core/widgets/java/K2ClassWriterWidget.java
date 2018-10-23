@@ -16,11 +16,11 @@ import com.k2.Util.classes.Dependency;
 import com.k2.WidgetAssembly.WidgetAssemblyNode;
 import com.k2.WidgetFactory.annotation.Widget;
 import com.k2.common.annotation.MetaComponent;
-import com.k2.core.model.K2Class;
-import com.k2.core.model.K2Entity;
-import com.k2.core.model.K2Field;
-import com.k2.core.types.ClassType;
-import com.k2.core.types.ComponentType;
+import com.k2.common.model.K2Class;
+import com.k2.common.model.K2Entity;
+import com.k2.common.model.K2Field;
+import com.k2.common.types.ClassType;
+import com.k2.common.types.ComponentType;
 
 @Widget("K2ClassWriter")
 public class K2ClassWriterWidget extends AJavaWidget<K2Class> {

@@ -2,10 +2,10 @@ package com.k2.core.assemblies;
 
 import com.k2.JavaAssembly.JavaAssembly;
 import com.k2.JavaAssembly.JavaWidgetFactory;
-import com.k2.core.model.K2Class;
-import com.k2.core.model.K2Field;
-import com.k2.core.model.K2Type;
-import com.k2.core.model.K2TypeValue;
+import com.k2.common.model.K2Class;
+import com.k2.common.model.K2Field;
+import com.k2.common.model.K2Type;
+import com.k2.common.model.K2TypeValue;
 
 public class K2TypeAssembly extends JavaAssembly<K2Type> {
 

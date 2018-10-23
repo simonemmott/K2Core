@@ -24,16 +24,16 @@ import com.k2.Util.classes.ClassUtil;
 import com.k2.common.dao.K2Dao;
 import com.k2.common.dao.K2DaoFactory;
 import com.k2.common.domain.K2DomainManager;
+import com.k2.common.model.K2Class;
+import com.k2.common.model.K2Component;
+import com.k2.common.model.K2Entity;
+import com.k2.common.model.K2Field;
+import com.k2.common.model.K2Interface;
+import com.k2.common.model.aModel.AK2Class;
 import com.k2.common.reflector.K2Reflector;
+import com.k2.common.types.ComponentType;
 import com.k2.core.assemblies.K2ClassAssembly;
-import com.k2.core.model.K2Class;
-import com.k2.core.model.K2Component;
-import com.k2.core.model.K2Entity;
-import com.k2.core.model.K2Field;
-import com.k2.core.model.K2Interface;
-import com.k2.core.model.aModel.AK2Class;
 import com.k2.core.source.ComponentGenerator;
-import com.k2.core.types.ComponentType;
 
 
 

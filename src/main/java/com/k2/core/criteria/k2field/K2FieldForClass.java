@@ -9,8 +9,8 @@ import com.k2.common.criteria.K2Criteria;
 import com.k2.common.criteria.K2ListCriteria;
 import com.k2.common.criteria.K2ListCriteriaBuilder;
 import com.k2.common.dao.FieldInitialiser;
-import com.k2.core.model.K2Class;
-import com.k2.core.model.K2Field;
+import com.k2.common.model.K2Class;
+import com.k2.common.model.K2Field;
 
 @K2Criteria(forClass=K2Field.class, alias="forClass")
 public class K2FieldForClass extends AbstractK2ListCriteria<K2Field> implements K2ListCriteria<K2Field> {

@@ -10,14 +10,14 @@ import org.slf4j.LoggerFactory;
 
 import com.k2.JavaAssembly.AJavaWidget;
 import com.k2.JavaAssembly.JavaWidgetFactory;
+import com.k2.common.model.K2Class;
+import com.k2.common.model.K2Component;
+import com.k2.common.model.K2Domain;
+import com.k2.common.model.K2Entity;
+import com.k2.common.model.K2Type;
 import com.k2.core.assemblies.K2ClassAssembly;
 import com.k2.core.assemblies.K2SequenceAssembly;
 import com.k2.core.assemblies.K2TypeAssembly;
-import com.k2.core.model.K2Class;
-import com.k2.core.model.K2Component;
-import com.k2.core.model.K2Domain;
-import com.k2.core.model.K2Entity;
-import com.k2.core.model.K2Type;
 
 public class ComponentGenerator extends CodeGenerator{
 	

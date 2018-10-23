@@ -17,9 +17,9 @@ import com.k2.WidgetAssembly.WidgetAssemblyNode;
 import com.k2.WidgetFactory.annotation.Widget;
 import com.k2.common.annotation.MetaComponent;
 import com.k2.common.annotation.MetaField;
-import com.k2.core.model.K2Field;
-import com.k2.core.types.ClassType;
-import com.k2.core.types.FieldType;
+import com.k2.common.model.K2Field;
+import com.k2.common.types.ClassType;
+import com.k2.common.types.FieldType;
 
 @Widget("K2FieldWriter")
 public class K2FieldWriterWidget extends AJavaWidget<K2Field> {

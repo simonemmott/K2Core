@@ -19,13 +19,13 @@ import com.k2.EntityMap.EntitiesMap;
 import com.k2.JavaAssembly.JavaWidgetFactory;
 import com.k2.Util.ObjectUtil;
 import com.k2.Util.classes.ClassUtil;
+import com.k2.common.model.K2Class;
+import com.k2.common.model.K2Component;
+import com.k2.common.model.K2Field;
+import com.k2.common.model.aModel.AK2Class;
 import com.k2.common.reflector.K2Reflector;
+import com.k2.common.types.ComponentType;
 import com.k2.core.assemblies.K2ClassAssembly;
-import com.k2.core.model.K2Class;
-import com.k2.core.model.K2Component;
-import com.k2.core.model.K2Field;
-import com.k2.core.model.aModel.AK2Class;
-import com.k2.core.types.ComponentType;
 
 
 

@@ -18,15 +18,15 @@ import com.k2.WidgetAssembly.WidgetAssemblyNode;
 import com.k2.WidgetFactory.annotation.Widget;
 import com.k2.common.annotation.MetaComponent;
 import com.k2.common.annotation.MetaSequences;
+import com.k2.common.model.K2Class;
+import com.k2.common.model.K2Component;
+import com.k2.common.model.K2Domain;
+import com.k2.common.model.K2Entity;
+import com.k2.common.model.K2Field;
 import com.k2.common.sequence.K2Sequence;
 import com.k2.common.sequence.K2SequenceFactory;
-import com.k2.core.model.K2Class;
-import com.k2.core.model.K2Component;
-import com.k2.core.model.K2Domain;
-import com.k2.core.model.K2Entity;
-import com.k2.core.model.K2Field;
-import com.k2.core.types.ClassType;
-import com.k2.core.types.ComponentType;
+import com.k2.common.types.ClassType;
+import com.k2.common.types.ComponentType;
 
 @Widget("K2DomainSequenceWriter")
 public class K2SequenceWriterWidget extends AJavaWidget<K2Domain> {
